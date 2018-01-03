@@ -1,10 +1,6 @@
 <?php
 /**
  * 全能收款码（四码合一收款）QrPay
- * By LuckyMoke
- * http://blog.luckymoke.cn
- * 2017-10-14
- * V1.0
  */
 if (@$_GET['a'] == 'qrcode') {
     if (@$_GET['text']) {
@@ -19,13 +15,13 @@ $ua    = $_SERVER['HTTP_USER_AGENT'];
 if (strpos($ua, 'Alipay')) {
     //支付宝
     $config = array(
-        "url" => "https://qr.alipay.com/tsx099685ffdf96nzasre20",
+        "url" => "TTPS://QR.ALIPAY.COM/FKX01872C33BXLCRU5XQF7",
         "new" => 0,
     );
 } elseif (strpos($ua, 'MicroMessenger')) {
     //微信
     $config = array(
-        "url"  => "wxp://f2f0IAm1X5nDUUp2XMdaWmum6WThAQAgpxtI",
+        "url"  => "wxp://f2f01fRtjGM205iRZPH2WYx4xZPAWXdIZSt2",
         "text" => "长按二维码付款",
         "col"  => "#44b549",
         "new"  => 1,
@@ -33,7 +29,7 @@ if (strpos($ua, 'Alipay')) {
 } elseif (strpos($ua, 'QQ/')) {
     //QQ
     $config = array(
-        "url"  => "http://vac.qq.com/wallet/qrcode.htm?m=tenpay&a=1&u=839488083&ac=7B411D7D0588EBECADFAF6E63B7619DE1B6906DDFD7C1B9919FF8442F8A7C5C0&n=%E5%B0%8F%E5%B0%8F%E9%85%A5&f=wallet",
+        "url"  => "https://i.qianbao.qq.com/wallet/sqrcode.htm?m=tenpay&a=1&u=86254741&ac=1C7289CD21E0E4A38511E2DCF22F0EF3BD0F53356FA7D63F36A601AF5608B420&n=%E6%9A%AE%E5%9F%8E&f=wallet",
         "text" => "长按二维码付款",
         "col"  => "#0099de",
         "new"  => 1,
@@ -41,7 +37,7 @@ if (strpos($ua, 'Alipay')) {
 } elseif (strpos($ua, 'JDJR')) {
     //京东金融
     $config = array(
-        "url"  => "https://h5pay.jd.com/c2cIndex?t=a0b403101eb284e3213b4660b79e506a2bbd48319fa32a4e84bae1edda3a5e15",
+        "url"  => "https://h5pay.jd.com/c2cIndex?t=8140ddd0955eecc4c8d87abc2c6796651ba192843ae68b0042c9fb0848439bd4",
         "new"  => 0,
     );
 } else {
@@ -94,7 +90,7 @@ $config['img'] = @$config['img'] ? $config['img'] : $urlqr . urlencode($config['
                 <?php echo $config['text'] ?>
             </div>
         </div>
-        <div class="am-text-center _copy">由小小酥开发</div>
+        <div class="am-text-center _copy">由暮城提供技术支持</div>
     </div>
 </body>
 </html>
